@@ -107,8 +107,8 @@ JASMINE
 0x3A66D // zubat, zubat
 0x3A64D // grimer, grimer, muk
 0x3A679 // koffing, grimer, zubat, rattata
-0x39DC7 // marc: 3xmagnemite
-0x39DD4 // rich: porygon
+MARC // marc: 3xmagnemite
+RICH // rich: porygon
 0x3B2C0 // rocket executive: 5x koffing, 1x weezing
 
 // underground

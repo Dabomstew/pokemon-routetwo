@@ -50,8 +50,9 @@ public class DamageCalculator {
 			effective_def = crit ? ((defMod.getSpcDefStage() <= 0) ? def_spc
 					: ds_orig) : def_spc;
 		}
-		int a = (int) (((int) ((attacker.getLevel() * 0.4 * (crit ? 2 : 1)) + 2)
-				* (effective_atk) * attack.getPower() / 50 / (effective_def) + 2)
+		int a = (int) ((Math.min((int) ((attacker.getLevel() * 0.4) + 2)
+				* (effective_atk) * attack.getPower() / 50 / (effective_def)
+				* (crit ? 2 : 1), 997) + 2)
 				* (STAB ? 1.5 : 1) * effectiveMult);
 		while (multiplier_turn > 1) {
 			a *= 2;
@@ -184,13 +185,15 @@ public class DamageCalculator {
 		int oppHP = p2.getHP();
 		// test if noncrits can kill in 1shot
 		if (maxDmg >= oppHP && minDmg < oppHP) {
-			double oneShotPct = oneShotPercentage(m, p1, p2, mod1, mod2, false, stage);
+			double oneShotPct = oneShotPercentage(m, p1, p2, mod1, mod2, false,
+					stage);
 			sb.append(String.format("\t(One shot prob.: %.02f%%)", oneShotPct)
 					+ endl);
 		}
 		// test if crits can kill in 1shot
 		if (critMaxDmg >= oppHP && critMinDmg < oppHP) {
-			double oneShotPct = oneShotPercentage(m, p1, p2, mod1, mod2, true, stage);
+			double oneShotPct = oneShotPercentage(m, p1, p2, mod1, mod2, true,
+					stage);
 			sb.append(String.format("\t(Crit one shot prob.: %.02f%%)",
 					oneShotPct) + endl);
 		}
