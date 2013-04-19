@@ -3,17 +3,17 @@ ranges
 
 0x39AEF // chikorita rival
 
-0x39E0A // mikey on route 30
+MIKEY // mikey on route 30
 lm RAGE
 
 // gym 1
-0x39FF8 // abe
-0x39FEE // rod
-0x39A1F // falkner
+ABE // abe
+ROD // rod
+FALKNER // falkner
 
 // union cave (preferred fight)
 // 0x3AF44 is the russell (geodudes) fight
-0x3B17C // firebreather koffing, koffing
+BILL // firebreather koffing, koffing
 
 // slowpoke well
 0x3A791 // 2 rattatas
@@ -23,9 +23,9 @@ lm WATERGUN
 0x3A629 // L14 koffing
 
 // gym 2
-0x3B887 // spinarak first
-0x3A889 // caterpie,weedle
-0x39A4B // bugsy
+AMY&MAY // spinarak first
+AL // caterpie,weedle
+BUGSY // bugsy
 evolve CROCONAW
 lm FURYCUTTER
 um SCRATCH
@@ -36,20 +36,20 @@ lm HEADBUTT
 um FURYCUTTER
 
 // first trip north from goldenrod
-0x3A89B // arnie
+ARNIE // arnie
 
 // gym 3
-0x3A0D1 // carrie
-0x39A35 // whitney
+CARRIE // carrie
+WHITNEY // whitney
 lm BITE
 um LEER
 
 // kimonos
-0x3B859 // flareon
-0x3B863 // espeon
-0x3B86C // umbreon
-0x3B875 // vaporeon
-0x3B87E // jolteon
+NAOKO // flareon
+SAYO // espeon
+ZUKI // umbreon
+KUNI // vaporeon
+MIKI // jolteon
 lm ICEPUNCH
 um RAGE
 lm SURF
@@ -59,27 +59,27 @@ um WATERGUN
 0x39B1F -xspc 1 // rival
 
 // gym 4
-0x3B6B4 // ping (5 gastlies)
-0x3B6A8 // jeffrey (highlvl haunter)
-0x3B709 // martha (gastly, haunter, gastly)
-0x39A65 -xspc 1 -xspd 1 // morty
+PING // ping (5 gastlies)
+JEFFREY // jeffrey (highlvl haunter)
+MARTHA // martha (gastly, haunter, gastly)
+MORTY -xspc 1 -xspd 1 // morty
 
 // pre-olivine and olivine
-0x3B954 // ruth (pikachu)
-0x3A7E7 // alfred
-0x3A7B5 // preston
-0x3A10A // connie
+RUTH // ruth (pikachu)
+ALFRED // alfred
+PRESTON // preston
+CONNIE // connie
 rarecandy
 evolve FERALIGATR
 stats
 lm STRENGTH // may as well show both strength and headbutt from here on out
 
 // gym 5
-0x3B216 // yoshi
-0x3B244 // lao
-0x3B250 // nob
-0x3B26D // lung
-0x39ABB -xatk 2 // chuck
+YOSHI // yoshi
+LAO // lao
+NOB // nob
+LUNG // lung
+CHUCK -xatk 2 // chuck
 
 // rocket base
 0x3A71F // first alert grunt
@@ -96,10 +96,10 @@ L23 ELECTRODE
 
 // gym 6
 //0x3B77A is douglas
-0x39A85
+PRYCE
 
 // gym 7
-0x39A9F
+JASMINE
 
 // radio tower
 0x3A641 // raticate, raticate
@@ -112,14 +112,14 @@ L23 ELECTRODE
 0x3B2C0 // rocket executive: 5x koffing, 1x weezing
 
 // underground
-0x3A5F8 // scrub donald
-0x3ADE3 // scrub teru
+DONALD // scrub donald
+TERU // scrub teru
 0x39B73 // rival
 0x3A6C9 // switch grunt 1 (rattata)
 0x3A6AD // switch grunt 2 (muk, koffing, rattata)
 0x3A761 // switch grunt 3 (koffing, muk)
-0x3B12B // eddie
-0x3B11C // duncan
+EDDIE // eddie
+DUNCAN // duncan
 0x3BA1C // door grunt (glooms)
 0x3A6D3 // warehouse grunt 1 (raticate, golbat)
 0x3A6DF // warehouse grunt 2 (grimer, weezing)
@@ -132,65 +132,65 @@ L23 ELECTRODE
 0x3B290 // big boss
 
 // gym 8
-0x3A221 // paul
-0x3A371 // fran
-0x3A22E // cody
-0x3A37A // lola
+PAUL // paul
+FRAN // fran
+CODY // cody
+LOLA // lola
 0x39ACF -xatk 1 // clair
 
 // pre-e4
-0x3A341 // darin (dragons den)
-0x3A3BE // beth (just before VR)
+DARIN // darin (dragons den)
+BETH // beth (just before VR)
 0x39BD9 // scrub rival
 
 // e4
-0x39C51 -xspc 1 -v 2 // will
+WILL -xspc 1 -v 2 // will
 lm EARTHQUAKE
 um BITE
-0x39CE6 -xspc 1 -v 2 // koga
-0x39C9A -xatk 1 -v 2 // bruno
-0x39CC0 -xspc 1 -v 2 // karen
-0x39D0B -v 2 // lance
+KOGA -xspc 1 -v 2 // koga
+BRUNO -xatk 1 -v 2 // bruno
+KAREN -xspc 1 -v 2 // karen
+LANCE -v 2 // lance
 
 // kanto
-0x3AD40 // stanley (on ship)
-0x3B55A // camper dean
+STANLY // stanley (on ship)
+DEAN // camper dean
 
 // nugget bridge
-0x39EF1 // dudley
-0x3A165 // ellen
-0x39EFC // joe
-0x3A123 // laura
-0x3B550 // lloyd
-0x3A131 // shannon
-0x3ADCD // pat
+DUDLEY // dudley
+ELLEN // ellen
+JOE // joe
+LAURA // laura
+LLOYD // lloyd
+SHANNON // shannon
+PAT // pat
 
 
 // erika gym
-0x3B8D9 // Jo&Zoe (victreebel first)
-0x3B48B // Tanya
-0x3A543 // Julia
-0x39DE1 // Erika
+JO&ZOE // Jo&Zoe (victreebel first)
+TANYA // Tanya
+JULIA // Julia
+ERIKA // Erika
 
 // janine road/gym
-0x3A067 // Bird Keeper Bob
-0x3A1D3 // Janine
+BOB // Bird Keeper Bob
+JANINE // Janine
 
 // misty gym
-0x39D5D -xatk 1 -v 2 // Misty
+MISTY -xatk 1 -v 2 // Misty
 
 // saffron gym
-0x3A831 // sabrina
+SABRINA // sabrina
 
 // vermillion gym
-0x3A7CE // gregory
-0x39D7D // surge
+GREGORY // gregory
+LT.SURGE // surge
 
 // pewter gym
-0x3B5E7 // jerry
-0x39D37 // brock
+JERRY // jerry
+BROCK // brock
 
 // final stretch
-0x3B101 // blaine
-0x3B9C6 -xatk 1 -xspc 1 // blue
-0x3B99C -v 2// red
+BLAINE // blaine
+BLUE -xatk 1 -xspc 1 // blue
+RED -xatk 3 -xspd 1 -v 2// red

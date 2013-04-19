@@ -57,9 +57,16 @@ public class Trainer implements Battleable, Iterable<Pokemon> {
 			return allTrainers.get(offset);
 	}
 
+	private static HashMap<String, Trainer> trainersByName;
+
+	public static Trainer getTrainer(String name) {
+		return trainersByName.get(name);
+	}
+
 	// must be called before any other calls are made
 	public static void initTrainers() {
 		allTrainers = new HashMap<Integer, Trainer>();
+		trainersByName = new HashMap<String, Trainer>();
 
 		List<Trainer> trainerList = null;
 		if (Settings.isGS)
@@ -69,6 +76,12 @@ public class Trainer implements Battleable, Iterable<Pokemon> {
 
 		for (Trainer t : trainerList) {
 			allTrainers.put(new Integer(t.offset), t);
+			if (t.name.equals("GRUNT") == false
+					&& t.name.equals("EXECUTIVE") == false
+					&& t.name.equals("?") == false
+					&& trainersByName.containsKey(t.name) == false) {
+				trainersByName.put(t.name, t);
+			}
 		}
 	}
 
