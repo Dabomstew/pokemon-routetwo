@@ -20,6 +20,7 @@ public class Pokemon implements Battleable {
 	private boolean defBadge = false;
 	private boolean spdBadge = false;
 	private boolean spcBadge = false;
+	private boolean[] elementalBadgeBoosts = new boolean[17];
 
 	// defaults to wild pokemon
 	public Pokemon(Species s, int newLevel) {
@@ -407,6 +408,22 @@ public class Pokemon implements Battleable {
 
 	public void setSpcBadge(boolean spcBadge) {
 		this.spcBadge = spcBadge;
+	}
+
+	public boolean isTypeBoosted(Type t) {
+		int index = Type.typeIndex(t);
+		if(index < 0 || index > 16) {
+			return false; 
+		}
+		return elementalBadgeBoosts[index];
+	}
+
+	public void setTypeBoosted(Type t) {
+		int index = Type.typeIndex(t);
+		if(index < 0 || index > 16) {
+			return; 
+		}
+		elementalBadgeBoosts[index] = true;
 	}
 
 	public void setAllBadges() {

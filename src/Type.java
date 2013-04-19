@@ -20,7 +20,7 @@ public enum Type {
 
 	// returns index associated with this type (in the order written)
 	// Type.NONE will return -1
-	private static int typeIndex(Type t) {
+	public static int typeIndex(Type t) {
 		switch (t) {
 		case NORMAL:
 			return 0;

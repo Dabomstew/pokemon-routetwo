@@ -25,7 +25,7 @@ lm WATERGUN
 // gym 2
 AMY&MAY // spinarak first
 AL // caterpie,weedle
-BUGSY // bugsy
+BUGSY -v 2 // bugsy
 evolve CROCONAW
 lm FURYCUTTER
 um SCRATCH
@@ -144,12 +144,12 @@ BETH // beth (just before VR)
 0x39BD9 // scrub rival
 
 // e4
-WILL -xspc 1 -v 2 // will
+WILL -xspc 1 // will
 lm EARTHQUAKE
 um BITE
-KOGA -xspc 1 -v 2 // koga
-BRUNO -xatk 1 -v 2 // bruno
-KAREN -xspc 1 -v 2 // karen
+KOGA -xspc 1 // koga
+BRUNO -xatk 1 // bruno
+KAREN -xspc 1 // karen
 LANCE -v 2 // lance
 
 // kanto
@@ -194,3 +194,5 @@ BROCK // brock
 BLAINE // blaine
 BLUE -xatk 1 -xspc 1 // blue
 RED -xatk 3 -xspd 1 -v 2// red
+
+stats
