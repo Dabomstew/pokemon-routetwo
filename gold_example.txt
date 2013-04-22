@@ -1,0 +1,223 @@
+// to be used with gold & toto
+ranges
+
+0x39A92 // chikorita rival
+
+ranges
+
+// routes 30/31
+MIKEY
+lm RAGE
+// spinner: ???
+
+// falkners gym
+ABE
+ROD
+FALKNER
+
+// route 32/union cave/33
+ALBERT
+// racestrat goldeen fisher: RALPH
+// onix spinner: DANIEL
+RUSSELL
+lm WATERGUN
+// spinner: BILL
+RAY
+// spinner: ANTHONY
+
+// slowpoke well
+0x3A61A // rattatas
+0x3B63F // zubat and ekans
+0x3A4BC // rattata and zubats
+0x3A4B2 // koffing
+
+// bugsy gym
+AMY&MAY
+AL
+// spinner: BENNY
+BUGSY
+evolve CROCONAW
+lm FURYCUTTER
+um SCRATCH
+
+// azalea rival
+0x39AA4
+lm HEADBUTT
+um FURYCUTTER
+
+// goldenrod gym
+CARRIE
+WHITNEY
+
+// routes 35&36
+KIM
+lm BITE
+um LEER
+IVAN
+// spinner: IRWIN
+ARNIE
+GREG
+
+// kimonos
+NAOKO
+SAYO
+ZUKI
+KUNI
+MIKI
+lm SURF
+um WATERGUN
+lm ICEPUNCH
+um RAGE
+
+// mortys gym
+PING
+JEFFREY
+MARTHA
+MORTY -xspd 1 -xspc 1
+
+// spinner on way to olivine: DANA
+
+// olivine
+ALFRED
+PRESTON
+CONNIE
+ERNEST -v 2 // ideal route doesn't have enough EXP by this point, don't fight this guy if you got 292
+rarecandy
+evolve FERALIGATR
+lm STRENGTH // as with Crystal, let's keep and check both from now on
+
+// spinner on way to cianwood: KAYLEE #goddammitusiku
+
+// cianwood
+YOSHI
+LAO
+NOB
+LUNG
+CHUCK -xatk 1 -v 2
+
+// rocket base
+0x3A5A8 // alarm 1 (drowzee, zubat)
+0x3A5B4 // alarm 2 (zubat, grimer, rattata)
+JED
+0x3A59C // venonats
+ROSS
+0x3B671 // password 1 (ekans, gloom)
+MITCH
+0x3A610 // password 2 (raticate)
+0x3A58E // the not-spinner (rattata, zubat, rattata)
+0x3B03F // executive: zubat, raticate, koffing
+0x3B306 // female executive: arbok, gloom, murkrow
+L23 ELECTRODE
+L23 ELECTRODE
+L23 ELECTRODE
+
+// pryce & jasmine
+protein
+// spinner: DOUGLAS
+PRYCE -v 2
+// spinner: ERNEST again if not fought
+JASMINE
+
+
+// radio tower 1
+0x3A51C // raticates
+0x3A4F6 // zubats
+0x3A4D6 // grimer grimer muk
+0x3A502 // koffing grimer zubat rattata
+MARC
+RICH
+0x3B00F -v 2 // executive with koffings & weezing
+
+// underground
+DONALD
+TERU
+0x39B16 -v 2 // rival 4
+0x3A552 // single rattata
+0x3A536 // muk, koffing, rattata
+0x3A5EA // koffing, muk
+EDDIE
+DUNCAN
+0x3B655 // glooms
+0x3A55C // raticate, golbat
+0x3A568 // grimer, weezing
+0x3A5DE // koffingx2
+
+// radio tower 2
+0x3A51C // raticate, koffing
+0x3A5C2 // golbat
+0x3B2E8 // arbok, vileplume, murkrow
+0x3AFDF // houndour, koffing, houndoom
+
+VANCE // on way to blackthorn
+
+// blackthorn city
+PAUL
+FRAN
+CODY
+LOLA
+CLAIR -v 2
+
+// road to e4
+// rotato: MEGAN
+BLAKE
+RICHARD
+// spinner: JOYCE
+GAVEN
+JAKE
+BETH
+0x39B7C // rival 5
+
+// e4
+WILL -xspc 1
+lm EARTHQUAKE
+um BITE
+KOGA -xspc 1
+BRUNO -xatk 1
+KAREN -xspc 1
+LANCE
+
+STANLY //ssaqua
+
+// badge 1
+JIM
+DUDLEY
+ELLEN
+JOE
+LAURA
+LLOYD
+SHANNON
+PAT
+JO&ZOE
+TANYA
+JULIA
+ERIKA
+
+// badge 2
+// spinner: ???
+BOB
+JANINE
+
+// badge 3
+GREGORY
+LT.SURGE
+
+// badge 4
+JERRY
+BROCK
+
+// badge 5
+BLAINE
+
+// badge 6
+MISTY -xatk 1 -v 2
+
+// badge 7
+// spinner: REBECCA
+// spinner: DORIS
+SABRINA -v 2
+
+// badge 8
+BLUE -xatk 1 -xspc 1 -v 2
+
+// final
+RED -xatk 2 -xspd 1 -v 2

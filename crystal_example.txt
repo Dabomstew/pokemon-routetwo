@@ -3,6 +3,8 @@ ranges
 
 0x39AEF // chikorita rival
 
+ranges
+
 MIKEY // mikey on route 30
 lm RAGE
 
@@ -13,10 +15,10 @@ FALKNER // falkner
 
 // union cave (preferred fight)
 // 0x3AF44 is the russell (geodudes) fight
-BILL // firebreather koffing, koffing
+BILL -v 2 // firebreather koffing, koffing
 
 // slowpoke well
-0x3A791 // 2 rattatas
+0x3A791 -v 2 // 2 rattatas
 lm WATERGUN
 0x3BA06 // zubat, ekans
 0x3A633 // rattata, 2xzubat

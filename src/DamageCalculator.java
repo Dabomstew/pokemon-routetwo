@@ -50,6 +50,10 @@ public class DamageCalculator {
 			effective_def = crit ? ((defMod.getSpcDefStage() <= 0) ? def_spc
 					: ds_orig) : def_spc;
 		}
+		if (effective_atk > 255 || effective_def > 255) {
+			effective_atk = Math.max(1, effective_atk >> 2);
+			effective_def = Math.max(1, effective_def >> 2);
+		}
 		int damage = ((Math.min((int) ((attacker.getLevel() * 0.4) + 2)
 				* (effective_atk) * attack.getPower() / 50 / (effective_def)
 				* (crit ? 2 : 1), 997) + 2));
