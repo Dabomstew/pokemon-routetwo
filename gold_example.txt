@@ -8,7 +8,7 @@ ranges
 // routes 30/31
 MIKEY
 lm RAGE
-// spinner: ???
+// spinner: DON
 
 // falkners gym
 ABE
@@ -17,8 +17,8 @@ FALKNER
 
 // route 32/union cave/33
 ALBERT
-// racestrat goldeen fisher: RALPH
-// onix spinner: DANIEL
+// racestrat: RALPH
+// spinner: DANIEL
 RUSSELL
 lm WATERGUN
 // spinner: BILL
