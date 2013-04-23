@@ -211,8 +211,8 @@ public class Pokemon implements Battleable {
 	}
 
 	public int expGiven(int participants) {
-		return (int) ((isWild() ? 1 : 1.5)
-				* (species.getKillExp() / participants) * level / 7);
+		return (species.getKillExp() / participants) * level / 7 * 3
+				/ (isWild() ? 3 : 2);
 	}
 
 	public String toString() {
@@ -412,16 +412,16 @@ public class Pokemon implements Battleable {
 
 	public boolean isTypeBoosted(Type t) {
 		int index = Type.typeIndex(t);
-		if(index < 0 || index > 16) {
-			return false; 
+		if (index < 0 || index > 16) {
+			return false;
 		}
 		return elementalBadgeBoosts[index];
 	}
 
 	public void setTypeBoosted(Type t) {
 		int index = Type.typeIndex(t);
-		if(index < 0 || index > 16) {
-			return; 
+		if (index < 0 || index > 16) {
+			return;
 		}
 		elementalBadgeBoosts[index] = true;
 	}
