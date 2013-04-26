@@ -1,4 +1,4 @@
-RouteTwo v1.00 beta, by Dabomstew, derived from RouteTwo by HRoll
+RouteTwo v1.00 beta, by Dabomstew, derived from RouteOne by HRoll
 
 RouteOne is available from: https://github.com/HRoll/poke-router
 
@@ -11,10 +11,10 @@ Also, when reading your output, be sure to check the top of the file. Any error 
 For more detailed instructions, see doc.txt.
 
 Credits:
-HRoll - for making the original RouteTwo which contributes 80% of the code for this
+HRoll - for making the original RouteOne which contributes 80% of the code for this
 http://twitch.tv/hroll
 
-Mountebank - for contributing to the development of the original RouteTwo
+Mountebank - for contributing to the development of the original RouteOne
 http://twitch.tv/mountebank
 
 SpeedRunsLive - for inspiration/awesome races

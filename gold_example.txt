@@ -11,9 +11,9 @@ lm RAGE
 // spinner: DON
 
 // falkners gym
-ABE
+ABE -v 2
 ROD
-FALKNER
+FALKNER -v 2
 
 // route 32/union cave/33
 ALBERT
@@ -47,7 +47,7 @@ um FURYCUTTER
 
 // goldenrod gym
 CARRIE
-WHITNEY
+WHITNEY -v 2
 
 // routes 35&36
 KIM
@@ -72,7 +72,7 @@ um RAGE
 // mortys gym
 PING
 JEFFREY
-MARTHA
+MARTHA -v 2
 MORTY -xspd 1 -xspc 1
 
 // spinner on way to olivine: DANA
