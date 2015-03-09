@@ -11,9 +11,9 @@ lm RAGE
 // spinner: DON
 
 // falkners gym
-ABE -v 2
+ABE 
 ROD
-FALKNER -v 2
+FALKNER 
 
 // route 32/union cave/33
 ALBERT
@@ -47,7 +47,7 @@ um FURYCUTTER
 
 // goldenrod gym
 CARRIE
-WHITNEY -v 2
+WHITNEY 
 
 // routes 35&36
 KIM
@@ -72,7 +72,7 @@ um RAGE
 // mortys gym
 PING
 JEFFREY
-MARTHA -v 2
+MARTHA 
 MORTY -xspd 1 -xspc 1
 
 // spinner on way to olivine: DANA
@@ -81,7 +81,7 @@ MORTY -xspd 1 -xspc 1
 ALFRED
 PRESTON
 CONNIE
-ERNEST -v 2 // ideal route doesn't have enough EXP by this point, don't fight this guy if you got 292
+ERNEST  // ideal route doesn't have enough EXP by this point, don't fight this guy if you got 292
 rarecandy
 evolve FERALIGATR
 lm STRENGTH // as with Crystal, let's keep and check both from now on
@@ -93,7 +93,7 @@ YOSHI
 LAO
 NOB
 LUNG
-CHUCK -xatk 1 -v 2
+CHUCK -xatk 1 
 
 // rocket base
 0x3A5A8 // alarm 1 (drowzee, zubat)
@@ -114,7 +114,7 @@ L23 ELECTRODE
 // pryce & jasmine
 protein
 // spinner: DOUGLAS
-PRYCE -v 2
+PRYCE 
 // spinner: ERNEST again if not fought
 JASMINE
 
@@ -126,12 +126,16 @@ JASMINE
 0x3A502 // koffing grimer zubat rattata
 MARC
 RICH
-0x3B00F -v 2 // executive with koffings & weezing
+0x3B00F  // executive with koffings & weezing
 
 // underground
+calcium
+calcium
+calcium
 DONALD
 TERU
-0x39B16 -v 2 // rival 4
+lm RETURN
+0x39B16  // rival 4
 0x3A552 // single rattata
 0x3A536 // muk, koffing, rattata
 0x3A5EA // koffing, muk
@@ -147,6 +151,7 @@ DUNCAN
 0x3A5C2 // golbat
 0x3B2E8 // arbok, vileplume, murkrow
 0x3AFDF // houndour, koffing, houndoom
+pinkbowflag
 
 VANCE // on way to blackthorn
 
@@ -155,7 +160,7 @@ PAUL
 FRAN
 CODY
 LOLA
-CLAIR -v 2
+CLAIR 
 
 // road to e4
 // rotato: MEGAN
@@ -171,10 +176,12 @@ BETH
 WILL -xspc 1
 lm EARTHQUAKE
 um BITE
-KOGA -xspc 1
+KOGA 
 BRUNO -xatk 1
 KAREN -xspc 1
-LANCE
+ranges
+stats
+LANCE -v 2 -lvranges
 
 STANLY //ssaqua
 
@@ -209,15 +216,16 @@ BROCK
 BLAINE
 
 // badge 6
-MISTY -xatk 1 -v 2
+MISTY -xatk 1 
 
 // badge 7
 // spinner: REBECCA
 // spinner: DORIS
-SABRINA -v 2
+SABRINA 
 
 // badge 8
-BLUE -xatk 1 -xspc 1 -v 2
+ranges
+BLUE -xatk 2 -v 2 -lvranges
 
 // final
-RED -xatk 2 -xspd 1 -v 2
+RED -xatk 5 -xspd 1 

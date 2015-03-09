@@ -139,6 +139,9 @@ public class RouteParser {
 		} else if (firstToken.equalsIgnoreCase("carbos")) {
 			return GameAction.eatCarbos;
 		}
+		else if (firstToken.equalsIgnoreCase("pinkbowflag")) {
+			return GameAction.pinkBowFlag;
+		}
 		// printing commands
 		else if (firstToken.equalsIgnoreCase("stats")) {
 			if (n == 1) {

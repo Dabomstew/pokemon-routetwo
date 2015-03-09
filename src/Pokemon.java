@@ -154,7 +154,11 @@ public class Pokemon implements Battleable {
 	}
 
 	public int getSpcDef() {
-		return (int) (spcBadge ? 9 * spcDef / 8 : spcDef);
+		int spatk_for_bug = getSpcAtk();
+		if (spcBadge && Constants.givesSpDefBadgeBoost(spatk_for_bug)) {
+			return 9 * spcDef / 8;
+		}
+		return spcDef;
 	}
 
 	public int getSpd() {

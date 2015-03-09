@@ -294,15 +294,17 @@ public class StatModifier {
 		return a;
 	}
 	
-	public int modSpcDef(Pokemon p) {
+	public int modSpcDef(Pokemon p, int spA) {
 		int a = Math.max((int) (p.getTrueSpcDef() * getSpcDefMultiplier()), 1);
-		if (p.isSpcBadge()) {
+		if (p.isSpcBadge() && Constants.givesSpDefBadgeBoost(spA)) {
 			for (int i = 1; i <= spcBB + 1; i++) {
 				a = 9 * a / 8;
 			}
 		}
 		return a;
 	}
+	
+	
 
 	public int modSpd(Pokemon p) {
 		int a = Math.max((int) (p.getTrueSpd() * getSpdMultiplier()), 1);
@@ -325,7 +327,7 @@ public class StatModifier {
 
 	public String modStatsStr(Pokemon p) {
 		return String.format("%s/%s/%s/%s/%s/%s", p.getHP(), modAtk(p), modDef(p),
-				modSpd(p), modSpcAtk(p), modSpcDef(p));
+				modSpd(p), modSpcAtk(p), modSpcDef(p, modSpcAtk(p)));
 	}
 
 }

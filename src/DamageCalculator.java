@@ -27,7 +27,9 @@ public class DamageCalculator {
 		int as_orig = attacker.getTrueSpcAtk();
 		int atk_spc = atkMod.modSpcAtk(attacker);
 		int ds_orig = defender.getTrueSpcDef();
-		int def_spc = defMod.modSpcDef(defender);
+		int dsa_orig_bug = defender.getTrueSpcAtk();
+		int atk_spc_orig_bug = defMod.modSpcAtk(defender);
+		int def_spc = defMod.modSpcDef(defender, atk_spc_orig_bug);
 
 		boolean STAB = attack.getType() == attacker.getSpecies().getType1()
 				|| attack.getType() == attacker.getSpecies().getType2();
@@ -54,9 +56,19 @@ public class DamageCalculator {
 			effective_atk = Math.max(1, effective_atk >> 2);
 			effective_def = Math.max(1, effective_def >> 2);
 		}
-		int damage = ((Math.min((int) ((attacker.getLevel() * 0.4) + 2)
-				* (effective_atk) * attack.getPower() / 50 / (effective_def)
-				* (crit ? 2 : 1), 997) + 2));
+		// int damage = ((Math.min((int) ((attacker.getLevel() * 0.4) + 2)
+		// * (effective_atk) * attack.getPower() / 50 / (effective_def)
+		// * (crit ? 2 : 1), 997) + 2));
+		int damage = (attacker.getLevel() * 2 / 5 + 2) * attack.getPower()
+				* effective_atk;
+		damage = damage / effective_def / 50;
+		if (Constants.pinkBow && attack.getType() == Type.NORMAL) {
+			damage = damage * 110 / 100;
+		}
+		if (crit) {
+			damage *= 2;
+		}
+		damage = Math.min(damage, 997) + 2;
 		if (attacker.isTypeBoosted(attack.getType())) {
 			int typeboost = Math.max(damage * 1 / 8, 1);
 			damage += typeboost;

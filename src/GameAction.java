@@ -21,6 +21,11 @@ public abstract class GameAction {
         void performAction(Pokemon p) { p.eatCarbos(); }
     };
     
+    public static final GameAction pinkBowFlag = new GameAction() {
+        void performAction(Pokemon p) { Constants.pinkBow = true; }
+    };
+    
+    
     //badges
     public static final GameAction getBoulderBadge = new GameAction() {
         void performAction(Pokemon p) { p.setAtkBadge(true); }
