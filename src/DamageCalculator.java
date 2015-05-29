@@ -199,7 +199,7 @@ public class DamageCalculator {
 
     private static void damage_help(StringBuilder sb, Move move, Pokemon p1, Pokemon p2, StatModifier mod1, StatModifier mod2, int extra_modifier) {
 		String endl = Constants.endl;
-    	int minDmg = Math.min(p1.getHP(), minDamage(move, p1, p2, mod1, mod2, extra_modifier));
+    	int minDmg = Math.min(p2.getHP(), minDamage(move, p1, p2, mod1, mod2, extra_modifier));
    		if(minDmg > 0)
    		{
        		int minCritDmg = Math.min(p2.getHP(), minCritDamage(move, p1, p2, mod1, mod2, extra_modifier));

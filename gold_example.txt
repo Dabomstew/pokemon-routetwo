@@ -32,7 +32,7 @@ lm WATERGUN
 RAY -lvranges -v 2
 
 //route 33
-ANTHONY -lvranges -v 2
+//ANTHONY -lvranges -v 2
 
 // slowpoke well
 0x3A61A -lvranges -v 2 // rattatas
@@ -75,7 +75,7 @@ um FURYCUTTER
 um RAGE
 
 // route 37
-//L20 SUDOWOODO 9 8 8 8 -v 2
+L20 SUDOWOODO 9 8 8 8 -v 2
 ranges 
 GREG -lvranges -v 2 
 
@@ -96,7 +96,7 @@ MARTHA -lvranges -v 2
 MORTY -v 2  -xspd 1 -xspc 3
 //ranges -b
 //Post-Morty Poliwag
-L22 POLIWAG 9 8 8 8 -v 2
+//L22 POLIWAG 9 8 8 8 -v 2
 
 // lighthouse
 ALFRED -xatk -1 -v 2 
