@@ -62,10 +62,12 @@ public class StatModifier {
 
 	// multiplier for atk,def,spc,spd
 	private static double normalStatMultiplier(int stage) {
-		if (stage >= 0)
-			return (double) (2 + stage) / 2;
-		else
-			return (double) 2 / (2 - stage);
+        if(stage >= 0)
+            return (double) (2+stage) / 2;
+        else if(stage == -1)
+        	return 0.66;
+        else
+            return (double) 2 / (2-stage);
 	}
 
 	public void setBadgeBoosts(int atkBB, int defBB, int spdBB, int spcBB) {

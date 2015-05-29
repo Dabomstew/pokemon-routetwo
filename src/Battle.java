@@ -98,6 +98,8 @@ public class Battle extends GameAction {
 				printShortBattle(p, (Pokemon) opponent);
 
 			opponent.battle(p, options);
+            Main.appendln(String.format("LVL: %d EXP NEEDED: %d/%d", p.getLevel(),
+                    p.expToNextLevel(), p.expForLevel()));
 		} else { // is a Trainer
 			Trainer t = (Trainer) opponent;
 			if (getVerbose() == BattleOptions.ALL
@@ -120,13 +122,14 @@ public class Battle extends GameAction {
 						Main.appendln(p.statRanges(true));
 					}
 				}
+				Main.appendln(String.format("LVL: %d EXP NEEDED: %d/%d",
+						p.getLevel(), p.expToNextLevel(), p.expForLevel()));
+
 			}
 		}
-		if (getVerbose() == BattleOptions.ALL
-				|| getVerbose() == BattleOptions.SOME) {
-			Main.appendln(String.format("LVL: %d EXP NEEDED: %d/%d",
-					p.getLevel(), p.expToNextLevel(), p.expForLevel()));
-		}
+//		if (getVerbose() == BattleOptions.ALL
+//				|| getVerbose() == BattleOptions.SOME) {
+//		}
 	}
 
 	// does not actually do the battle, just prints summary

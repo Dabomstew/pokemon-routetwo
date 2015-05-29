@@ -1,2 +1,6 @@
 bin/
-out.txt
+*out.txt
+*.jar
+build/
+*.class
+.DS_Store

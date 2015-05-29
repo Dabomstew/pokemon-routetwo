@@ -1,231 +1,268 @@
 // to be used with gold & toto
 ranges
-
-0x39A92 // chikorita rival
-
+//L3 CATERPIE 15 15 15 15 -v 2
+//L3 CATERPIE 15 15 15 15 -v 2
 ranges
-
-// routes 30/31
-MIKEY
+0x39A92 -lvranges -xatk -0 -ydef -1 -v 2 // chikorita rival
 lm RAGE
-// spinner: DON
+// routes 30/31
+MIKEY -ydef 0 -lvranges -v 2
+lm RAGE
+//DON -lvranges -v 2
 
 // falkners gym
-ABE 
-ROD
-FALKNER 
+ABE -lvranges -v 2
+ROD -lvranges -v 2
+FALKNER -lvranges -v 2
 
-// route 32/union cave/33
-ALBERT
-// racestrat: RALPH
-// spinner: DANIEL
-RUSSELL
+// route 32
+ALBERT -lvranges -v 2
+//RALPH -ydef -1 -lvranges -v 2
+
+//union cave
+//DANIEL -ydef -3 -v 2
+RUSSELL -lvranges -v 2
 lm WATERGUN
-// spinner: BILL
-RAY
-// spinner: ANTHONY
+//L4 RATTATA 9 8 8 8 -v 2
+//L6 GEODUDE -v 2
+//L6 ONIX 9 8 8 8 -v 2
+//L6 SANDSHREW 9 8 8 8 -v 2
+//BILL -lvranges -v 2
+//L5 ZUBAT 9 8 8 8 -v 2 
+RAY -lvranges -v 2
+
+//route 33
+ANTHONY -lvranges -v 2
 
 // slowpoke well
-0x3A61A // rattatas
-0x3B63F // zubat and ekans
-0x3A4BC // rattata and zubats
-0x3A4B2 // koffing
+0x3A61A -lvranges -v 2 // rattatas
+0x3B63F -lvranges -v 2 // zubat and ekans
+0x3A4BC -lvranges -v 2 // rattata and zubats
+//L6 ZUBAT 9 8 8 8 -v 2
+0x3A4B2 -lvranges -v 2 // koffing
 
 // bugsy gym
-AMY&MAY
-AL
-// spinner: BENNY
-BUGSY
+AMY&MAY -lvranges -v 2 
+JOSH -ydef -1 -lvranges -v 2
+//BENNY -v 2
+BUGSY -lvranges -v 2
+
 evolve CROCONAW
+ranges
+
 lm FURYCUTTER
-um SCRATCH
-
-// azalea rival
-0x39AA4
-lm HEADBUTT
-um FURYCUTTER
-
-// goldenrod gym
-CARRIE
-WHITNEY 
-
-// routes 35&36
-KIM
-lm BITE
-um LEER
-IVAN
-// spinner: IRWIN
-ARNIE
-GREG
-
-// kimonos
-NAOKO
-SAYO
-ZUKI
-KUNI
-MIKI
-lm SURF
-um WATERGUN
-lm ICEPUNCH
 um RAGE
 
+// azalea rival
+0x39AA4 -lvranges -v 2 
+
+//L5 ODDISH 4 5 4 5 -v 2
+//L5 PARAS 0 0 0 0 -v 2
+
+lm HEADBUTT
+um LEER
+
+// early underground
+DONALD -xatk 0 -lvranges -v 2
+TERU -lvranges -v 2
+
+// goldenrod gym
+CARRIE -lvranges -v 2 
+WHITNEY -lvranges -v 2
+
+lm BITE
+um FURYCUTTER
+um RAGE
+
+// route 37
+//L20 SUDOWOODO 9 8 8 8 -v 2
+ranges 
+GREG -lvranges -v 2 
+
+// Kimono Girls
+NAOKO -lvranges -v 2   // FLAREON
+SAYO -lvranges -v 2    // ESPEON
+KUNI -lvranges -v 2    // VAPOREON
+MIKI -lvranges -v 2    // JOLTEON
+ZUKI -lvranges -v 2    // UMBREON
+
+lm SURF
+um SCRATCH
+
 // mortys gym
-PING
-JEFFREY
-MARTHA 
-MORTY -xspd 1 -xspc 1
+PING -lvranges -v 2 
+JEFFREY -lvranges -v 2 
+MARTHA -lvranges -v 2
+MORTY -v 2  -xspd 1 -xspc 3
+//ranges -b
+//Post-Morty Poliwag
+L22 POLIWAG 9 8 8 8 -v 2
 
-// spinner on way to olivine: DANA
+// lighthouse
+ALFRED -xatk -1 -v 2 
+PRESTON -v 2 
+CONNIE -v 2 
+//ERNEST -v 2
 
-// olivine
-ALFRED
-PRESTON
-CONNIE
-ERNEST  // ideal route doesn't have enough EXP by this point, don't fight this guy if you got 292
+lm STRENGTH
+um WATERGUN
+um SCRATCH
+
 rarecandy
 evolve FERALIGATR
-lm STRENGTH // as with Crystal, let's keep and check both from now on
 
-// spinner on way to cianwood: KAYLEE #goddammitusiku
+//route 41
+//KAYLEE -v 2
 
 // cianwood
-YOSHI
-LAO
-NOB
-LUNG
-CHUCK -xatk 1 
+YOSHI -v 2 
+//evolve FERALIGATR
+LAO -v 2 
+NOB -lvrangesb -v 2 
+LUNG -v 2 
+CHUCK -xatk 3 -xdef -1 -v 2
+//L30 GYARADOS 14 10 10 10 -v 2
+
+//BENJAMIN -v 2
 
 // rocket base
-0x3A5A8 // alarm 1 (drowzee, zubat)
-0x3A5B4 // alarm 2 (zubat, grimer, rattata)
-JED
-0x3A59C // venonats
-ROSS
-0x3B671 // password 1 (ekans, gloom)
-MITCH
-0x3A610 // password 2 (raticate)
-0x3A58E // the not-spinner (rattata, zubat, rattata)
-0x3B03F // executive: zubat, raticate, koffing
-0x3B306 // female executive: arbok, gloom, murkrow
-L23 ELECTRODE
-L23 ELECTRODE
-L23 ELECTRODE
+0x3A5A8 -v 2 // alarm 1 (drowzee, zubat)
+0x3A5B4 -v 2 // alarm 2 (zubat, grimer, rattata)
+JED -v 2 
 
-// pryce & jasmine
+0x3A59C -v 2  // venonats
+ROSS -v 2 
+0x3B671 -v 2 // password 1 (ekans, gloom)
+MITCH -v 2 
+0x3A610 -v 2  // password 2 (raticate)
+0x3A58E -v 2 // the not-spinner (rattata, zubat, rattata)
+0x3B03F -v 2 // executive: zubat, raticate, koffing
+0x3B306 -v 2 // female executive: arbok, gloom, murkrow
+L23 ELECTRODE -v 2 
+L23 ELECTRODE -v 2 
+L23 ELECTRODE -v 2 
 protein
-// spinner: DOUGLAS
-PRYCE 
-// spinner: ERNEST again if not fought
-JASMINE
 
+// pryce
+//DOUGLAS -v 2
+PRYCE -v 2
+
+// lighthouse redux
+//ERNEST -v 2
+
+// jasmine
+JASMINE -lvrangesb -v 2 
+
+//VANCE -v 2
+
+//calcium
+//calcium
 
 // radio tower 1
-0x3A51C // raticates
-0x3A4F6 // zubats
-0x3A4D6 // grimer grimer muk
-0x3A502 // koffing grimer zubat rattata
-MARC
-RICH
-0x3B00F  // executive with koffings & weezing
+0x3A4CA -v 2 // raticates
+0x3A4F6 -v 2 // zubats
+0x3A4D6 -v 2 // grimer grimer muk
+0x3A502 -v 2 // koffing grimer zubat rattata
+MARC -v 2 
+RICH -v 2 
+0x3B00F -xspc 1 -v 2 // executive with koffings & weezing
+
+lm ICEPUNCH
+um HEADBUTT
 
 // underground
-calcium
-calcium
-calcium
-DONALD
-TERU
+0x39B16 -xspc 1 -v 2 // rival 4
+0x3A552 -v 2 // single rattata
+0x3A536 -v 2 // muk, koffing, rattata
+0x3A5EA -v 2 // koffing, muk
+EDDIE -v 2 
+DUNCAN -v 2 
+0x3B655 -v 2 // glooms
+0x3A55C -v 2 // raticate, golbat
+0x3A568 -v 2 // grimer, weezing
+0x3A5DE -v 2 // koffingx2
+
 lm RETURN
-0x39B16  // rival 4
-0x3A552 // single rattata
-0x3A536 // muk, koffing, rattata
-0x3A5EA // koffing, muk
-EDDIE
-DUNCAN
-0x3B655 // glooms
-0x3A55C // raticate, golbat
-0x3A568 // grimer, weezing
-0x3A5DE // koffingx2
+um BITE
 
 // radio tower 2
-0x3A51C // raticate, koffing
-0x3A5C2 // golbat
-0x3B2E8 // arbok, vileplume, murkrow
-0x3AFDF // houndour, koffing, houndoom
+0x3A51C -v 2 // raticate, koffing
+0x3A5C2 -v 2 // golbat
+0x3B2E8 -v 2 // arbok, vileplume, murkrow
+0x3AFDF -v 2 // houndour, koffing, houndoom
 pinkbowflag
-
-VANCE // on way to blackthorn
+//L25 POLIWAG 0 5 0 5 -v 2
+VANCE -v 2
 
 // blackthorn city
-PAUL
-FRAN
-CODY
-LOLA
-CLAIR 
+PAUL -v 2 
+FRAN -v 2 
+CODY -v 2 
+LOLA -v 2 
+CLAIR -v 2
 
 // road to e4
-// rotato: MEGAN
-BLAKE
-RICHARD
-// spinner: JOYCE
-GAVEN
-JAKE
-BETH
-0x39B7C // rival 5
+BLAKE -v 2 
+RICHARD -v 2 
+
+// Heal House
+//JOYCE -v 2
+GAVEN -v 2 
+JAKE -v 2 
+BETH -v 2 
+0x39B7C -xspc 1 -v 2  // rival 5
 
 // e4
-WILL -xspc 1
-lm EARTHQUAKE
-um BITE
-KOGA 
-BRUNO -xatk 1
-KAREN -xspc 1
-ranges
-stats
-LANCE -v 2 -lvranges
+WILL -v 2 -xspc 1
+KOGA -v 2 -xspc 1
+BRUNO -v 2 -lvranges -xatk 2
+KAREN -v 2 -xspc 1
+LANCE -lvrangesb -v 2 
 
-STANLY //ssaqua
+// ssaqua
+STANLY -v 2 
 
-// badge 1
-JIM
-DUDLEY
-ELLEN
-JOE
-LAURA
-LLOYD
-SHANNON
-PAT
-JO&ZOE
-TANYA
-JULIA
-ERIKA
+// rock tunnel
+JIM -v 2
 
-// badge 2
-// spinner: ???
-BOB
-JANINE
+// erika
+JO&ZOE -v 2
+TANYA -v 2
+JULIA -v 2
+ERIKA -lvrangesb -xatk 1 -v 2
 
-// badge 3
-GREGORY
-LT.SURGE
+// sabrina
+//REBECCA -v 2
+SABRINA -ydef 2 -xatk 0 -v 2
 
-// badge 4
-JERRY
-BROCK
+// nugget bridge
+DUDLEY -v 2
+ELLEN -v 2
+JOE -v 2
+LAURA -v 2
+LLOYD -v 2
+SHANNON -v 2
+PAT -v 2
 
-// badge 5
-BLAINE
+// misty
+MISTY -v 2 -xatk 0
 
-// badge 6
-MISTY -xatk 1 
+// surge
+GREGORY -v 2
+LT.SURGE -v 2
 
-// badge 7
-// spinner: REBECCA
-// spinner: DORIS
-SABRINA 
+// brock
+JERRY -v 2
+BROCK -v 2
 
-// badge 8
-ranges
-BLUE -xatk 2 -v 2 -lvranges
+// blaine
+BLAINE -lvrangesb -v 2
 
-// final
-RED -xatk 5 -xspd 1 
+// janine
+JANINE -lvrangesb -v 2
+
+// blue
+BLUE -xatk 2 -lvrangesb -v 2
+
+// red
+RED -xatk 5 -xspd 1 -lvranges -v 2

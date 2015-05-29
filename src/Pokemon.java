@@ -459,7 +459,7 @@ public class Pokemon implements Battleable {
 				possibleDefs[i] = 9 * calcDefWithIV(i) / 8;
 				possibleSpds[i] = 9 * calcSpdWithIV(i) / 8;
 				possibleSpcAtks[i] = 9 * calcSpcAtkWithIV(i) / 8;
-				possibleSpcAtks[i] = 9 * calcSpcDefWithIV(i) / 8;
+				possibleSpcDefs[i] = 9 * calcSpcDefWithIV(i) / 8;
 			}
 		} else {
 			for (int i = 0; i < 16; i++) {
