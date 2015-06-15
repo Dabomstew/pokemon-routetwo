@@ -68,22 +68,33 @@ public class RouteParser {
 		}
 		// L(num), to indicate pokemon
 		else if (firstToken.matches("[Ll][0-9]+")) {
-			if (n < 2) {
-				Main.appendln("ERROR ON LINE " + lineNum);
-				return null;
-			}
-			int lvl = Integer.parseInt(firstToken.substring(1));
-			String species = tokens[1];
-			Pokemon b = new Pokemon(PokemonNames.getSpeciesFromName(species),
-					lvl); // default to wild pokemon
-			if (b.getSpecies() == null) {
-				Main.appendln("ERROR ON LINE " + lineNum + ": bad pokemon name");
-				return null;
-			}
-
-			String[] flagTokens = (String[]) Arrays.copyOfRange(tokens, 2, n);
-			return addFlagsToBattleable(b, flagTokens);
-		}
+            if(n < 2) {
+                Main.appendln("ERROR ON LINE " + lineNum);
+                return null;
+            }
+            int lvl = Integer.parseInt(firstToken.substring(1));
+            String species = tokens[1];
+            IVs ivs = null;
+            try
+            {
+            	Integer atk = Integer.parseInt(tokens[2]);
+            	Integer def = Integer.parseInt(tokens[3]);
+            	Integer spd = Integer.parseInt(tokens[4]);
+            	Integer spc = Integer.parseInt(tokens[5]);
+            	ivs = new IVs(atk,def,spd,spc);
+            }
+            catch(Exception exc)
+            {
+            	ivs = new IVs(15,15,15,15);
+            }
+            Pokemon b = new Pokemon(PokemonNames.getSpeciesFromName(species),lvl,ivs,true); //default to wild pokemon
+            if (b.getSpecies() == null) {
+                Main.appendln("ERROR ON LINE " + lineNum + ": bad pokemon name");
+                return null;
+            }
+            
+            String[] flagTokens = (String[]) Arrays.copyOfRange(tokens, 2, n);
+            return addFlagsToBattleable(b, flagTokens);		}
 		// evolve
 		else if (firstToken.equalsIgnoreCase("e")
 				|| firstToken.equalsIgnoreCase("evolve")) {

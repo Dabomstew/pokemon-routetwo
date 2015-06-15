@@ -60,12 +60,18 @@ public class StatModifier {
 		return normalStatMultiplier(stage);
 	}
 
-	// multiplier for atk,def,spc,spd
-	private static double normalStatMultiplier(int stage) {
-		if (stage >= 0)
-			return (double) (2 + stage) / 2;
-		else
-			return (double) 2 / (2 - stage);
+    //multiplier for atk,def,spc,spd
+    private static double normalStatMultiplier(int stage) {
+		return ((double) multipliers[stage + 6]) / divisors[stage + 6];
+	}
+
+	private static int[] multipliers = new int[] { 25, 28, 33, 40, 50, 66, 1,
+			15, 2, 25, 3, 35, 4 };
+	private static int[] divisors = new int[] { 100, 100, 100, 100, 100, 100,
+			1, 10, 1, 10, 1, 10, 1 };
+
+	private static int modifyStat(int original, int stage) {
+		return original * multipliers[stage + 6] / divisors[stage + 6];
 	}
 
 	public void setBadgeBoosts(int atkBB, int defBB, int spdBB, int spcBB) {
@@ -265,7 +271,7 @@ public class StatModifier {
 	}
 
 	public int modAtk(Pokemon p) {
-		int a = Math.max((int) (p.getTrueAtk() * getAtkMultiplier()), 1);
+		int a = Math.max(modifyStat(p.getTrueAtk(), atk), 1);
 		if (p.isAtkBadge()) {
 			for (int i = 1; i <= atkBB + 1; i++) {
 				a = 9 * a / 8;
@@ -275,7 +281,7 @@ public class StatModifier {
 	}
 
 	public int modDef(Pokemon p) {
-		int a = Math.max((int) (p.getTrueDef() * getDefMultiplier()), 1);
+		int a = Math.max(modifyStat(p.getTrueDef(), def), 1);
 		if (p.isDefBadge()) {
 			for (int i = 1; i <= defBB + 1; i++) {
 				a = 9 * a / 8;
@@ -285,7 +291,7 @@ public class StatModifier {
 	}
 
 	public int modSpcAtk(Pokemon p) {
-		int a = Math.max((int) (p.getTrueSpcAtk() * getSpcAtkMultiplier()), 1);
+		int a = Math.max(modifyStat(p.getTrueSpcAtk(), spcAtk), 1);
 		if (p.isSpcBadge()) {
 			for (int i = 1; i <= spcBB + 1; i++) {
 				a = 9 * a / 8;
@@ -295,7 +301,7 @@ public class StatModifier {
 	}
 	
 	public int modSpcDef(Pokemon p, int spA) {
-		int a = Math.max((int) (p.getTrueSpcDef() * getSpcDefMultiplier()), 1);
+		int a = Math.max(modifyStat(p.getTrueSpcDef(), spcDef), 1);
 		if (p.isSpcBadge() && Constants.givesSpDefBadgeBoost(spA)) {
 			for (int i = 1; i <= spcBB + 1; i++) {
 				a = 9 * a / 8;
@@ -304,10 +310,18 @@ public class StatModifier {
 		return a;
 	}
 	
-	
-
 	public int modSpd(Pokemon p) {
-		int a = Math.max((int) (p.getTrueSpd() * getSpdMultiplier()), 1);
+		int a = Math.max(modifyStat(p.getTrueSpd(), spd), 1);
+		if (p.isSpdBadge()) {
+			for (int i = 1; i <= spdBB + 1; i++) {
+				a = 9 * a / 8;
+			}
+		}
+		return a;
+	}
+
+	public int modSpdWithIV(Pokemon p, int iv) {
+		int a = Math.max(modifyStat(p.getSpdWithIV(iv), spd), 1);
 		if (p.isSpdBadge()) {
 			for (int i = 1; i <= spdBB + 1; i++) {
 				a = 9 * a / 8;

@@ -98,6 +98,8 @@ public class Battle extends GameAction {
 				printShortBattle(p, (Pokemon) opponent);
 
 			opponent.battle(p, options);
+            Main.appendln(String.format("LVL: %d EXP NEEDED: %d/%d", p.getLevel(),
+                    p.expToNextLevel(), p.expForLevel()));
 		} else { // is a Trainer
 			Trainer t = (Trainer) opponent;
 			if (getVerbose() == BattleOptions.ALL
@@ -109,7 +111,34 @@ public class Battle extends GameAction {
 					printBattle(p, (Pokemon) opps);
 				else if (getVerbose() == BattleOptions.SOME)
 					printShortBattle(p, (Pokemon) opps);
-				opps.battle(p, options);
+                if (getVerbose() != BattleOptions.NONE) {
+					if (options.getMod1().modSpdWithIV(p, 0) <= options.getMod2().modSpd(opps)
+							&& options.getMod1().modSpdWithIV(p, 15) >= options.getMod2().modSpd(opps)) {
+						int tieDV = 16, outspeedDV = 16;
+						int oppSpd = options.getMod2().modSpd(opps);
+						for (int sDV = 0; sDV < 16; sDV++) {
+							int mySpd = options.getMod1().modSpdWithIV(p, sDV);
+							if (mySpd == oppSpd && sDV < tieDV) {
+								tieDV = sDV;
+							}
+							if (mySpd > oppSpd && sDV < outspeedDV) {
+								outspeedDV = sDV;
+								break;
+							}
+						}
+						Main.append("(Speed DV required");
+						if (tieDV != 16 && outspeedDV != 16 && (tieDV != outspeedDV)) {
+							Main.append(" to outspeed: " + outspeedDV + ", to speedtie: " + tieDV);
+						} else if (outspeedDV != 16) {
+							Main.append(" to outspeed: " + outspeedDV);
+						} else {
+							Main.append(" to speedtie: " + tieDV);
+						}
+						Main.appendln(")");
+						Main.appendln("");
+					}
+				}
+                opps.battle(p, options);
 				// test if you leveled up on this pokemon
 				if (p.getLevel() > lastLvl) {
 					lastLvl = p.getLevel();
@@ -120,13 +149,14 @@ public class Battle extends GameAction {
 						Main.appendln(p.statRanges(true));
 					}
 				}
+				Main.appendln(String.format("LVL: %d EXP NEEDED: %d/%d",
+						p.getLevel(), p.expToNextLevel(), p.expForLevel()));
+
 			}
 		}
-		if (getVerbose() == BattleOptions.ALL
-				|| getVerbose() == BattleOptions.SOME) {
-			Main.appendln(String.format("LVL: %d EXP NEEDED: %d/%d",
-					p.getLevel(), p.expToNextLevel(), p.expForLevel()));
-		}
+//		if (getVerbose() == BattleOptions.ALL
+//				|| getVerbose() == BattleOptions.SOME) {
+//		}
 	}
 
 	// does not actually do the battle, just prints summary

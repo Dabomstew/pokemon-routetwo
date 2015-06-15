@@ -88,6 +88,9 @@ public class Move {
     public int getIndexNum() {
         return indexNum;
     }
+    public void setPower(int newPower) {
+    	power = newPower;
+    }
     
     //TODO: consider checking more
     public boolean isEqual(Object o) {

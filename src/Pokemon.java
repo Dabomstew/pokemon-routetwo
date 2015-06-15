@@ -2,11 +2,11 @@ public class Pokemon implements Battleable {
 	private Species species;
 	private int level;
 	private IVs ivs;
-	private int ev_hp;
-	private int ev_atk;
-	private int ev_def;
-	private int ev_spd;
-	private int ev_spc;
+    private int ev_hp, ev_hp_used;
+    private int ev_atk, ev_atk_used;
+    private int ev_def, ev_def_used;
+    private int ev_spd, ev_spd_used;
+    private int ev_spc, ev_spc_used;
 	private int hp;
 	private int atk;
 	private int def;
@@ -73,17 +73,22 @@ public class Pokemon implements Battleable {
 
 	// TODO constructor which accepts EVs
 	public void setZeroEVs() {
-		ev_hp = 0;
-		ev_atk = 0;
-		ev_def = 0;
-		ev_spc = 0;
-		ev_spd = 0;
+    	ev_hp = ev_hp_used = 0;
+		ev_atk = ev_atk_used = 0;
+		ev_def = ev_def_used = 0;
+		ev_spc = ev_spc_used = 0;
+		ev_spd = ev_spd_used = 0;
 	}
 
 	// call this to update your stats
 	// automatically called on level ups/rare candies, but not just from gaining
 	// stat EV
 	public void calculateStats() {
+    	ev_hp_used = ev_hp;
+		ev_atk_used = ev_atk;
+		ev_def_used = ev_def;
+		ev_spc_used = ev_spc;
+		ev_spd_used = ev_spd;
 		hp = calcHPWithIV(ivs.getHPIV());
 		atk = calcAtkWithIV(ivs.getAtkIV());
 		def = calcDefWithIV(ivs.getDefIV());
@@ -93,32 +98,32 @@ public class Pokemon implements Battleable {
 	}
 
 	private int calcHPWithIV(int iv) {
-		return calcStatNumerator(iv, species.getBaseHP(), ev_hp) * level / 100
+		return calcStatNumerator(iv, species.getBaseHP(), ev_hp_used) * level / 100
 				+ level + 10;
 	}
 
 	private int calcAtkWithIV(int iv) {
-		return calcStatNumerator(iv, species.getBaseAtk(), ev_atk) * level
+		return calcStatNumerator(iv, species.getBaseAtk(), ev_atk_used) * level
 				/ 100 + 5;
 	}
 
 	private int calcDefWithIV(int iv) {
-		return calcStatNumerator(iv, species.getBaseDef(), ev_def) * level
+		return calcStatNumerator(iv, species.getBaseDef(), ev_def_used) * level
 				/ 100 + 5;
 	}
 
 	private int calcSpdWithIV(int iv) {
-		return calcStatNumerator(iv, species.getBaseSpd(), ev_spd) * level
+		return calcStatNumerator(iv, species.getBaseSpd(), ev_spd_used) * level
 				/ 100 + 5;
 	}
 
 	private int calcSpcAtkWithIV(int iv) {
-		return calcStatNumerator(iv, species.getBaseSpcAtk(), ev_spc) * level
+		return calcStatNumerator(iv, species.getBaseSpcAtk(), ev_spc_used) * level
 				/ 100 + 5;
 	}
 
 	private int calcSpcDefWithIV(int iv) {
-		return calcStatNumerator(iv, species.getBaseSpcDef(), ev_spc) * level
+		return calcStatNumerator(iv, species.getBaseSpcDef(), ev_spc_used) * level
 				/ 100 + 5;
 	}
 
@@ -163,6 +168,10 @@ public class Pokemon implements Battleable {
 
 	public int getSpd() {
 		return (int) (spdBadge ? 9 * spd / 8 : spd);
+	}
+	
+    public int getSpdWithIV(int iv) {
+		return calcSpdWithIV(iv);
 	}
 
 	// not affected by badge boosts
@@ -459,7 +468,7 @@ public class Pokemon implements Battleable {
 				possibleDefs[i] = 9 * calcDefWithIV(i) / 8;
 				possibleSpds[i] = 9 * calcSpdWithIV(i) / 8;
 				possibleSpcAtks[i] = 9 * calcSpcAtkWithIV(i) / 8;
-				possibleSpcAtks[i] = 9 * calcSpcDefWithIV(i) / 8;
+				possibleSpcDefs[i] = 9 * calcSpcDefWithIV(i) / 8;
 			}
 		} else {
 			for (int i = 0; i < 16; i++) {
